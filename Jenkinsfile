@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("kristophjunge/mediawiki")
+        app = docker.build("jaganthoutam/mediawiki")
     }
 
     stage('Test image') {
