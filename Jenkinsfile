@@ -8,11 +8,11 @@ pipeline {
       steps {
         sh 'docker build -t kristophjunge/docker-mediawiki .'
       }
-   }       
+   }  
+}     
   stage('Push image') {
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")   
 	}
     }
-  }
