@@ -3,6 +3,10 @@ FROM ubuntu:16.04
 #MAINTAINER Kristoph Junge <kristoph.junge@gmail.com>
 MAINTAINER Jagadish Thoutam <jaganthoutam@gmail.com>
 
+RUN apt -yqq update
+RUN apt -yqq install nginx iputils-ping
+RUN apt-get install -y php php-fpm pdo-mysql php-mbstring
+
 # Change UID and GID of www-data user to match host privileges
 RUN usermod -u 999 www-data && \
     groupmod -g 999 www-data
