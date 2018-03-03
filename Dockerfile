@@ -1,5 +1,7 @@
-FROM php:7.0-fpm
-MAINTAINER Kristoph Junge <kristoph.junge@gmail.com>
+FROM ubuntu:16.04
+#FROM php:7.0-fpm
+#MAINTAINER Kristoph Junge <kristoph.junge@gmail.com>
+MAINTAINER Jagadish Thoutam <jaganthoutam@gmail.com>
 
 # Change UID and GID of www-data user to match host privileges
 RUN usermod -u 999 www-data && \
